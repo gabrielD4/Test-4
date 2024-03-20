@@ -8,12 +8,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MainTest {
 
-    private Main testing = new Main();
-
     @Test
-   void testGetDayOfWeek() {
+    void testGetDayOfWeek() {
         String date = "2023-03-01T13:00:00Z";
-        OffsetDateTime dateTime = OffsetDateTime.parse("2023-03-01T13:00:00Z");
+        OffsetDateTime dateTime = OffsetDateTime.parse(date);
         DayOfWeek dayOfWeek = Main.getDayOfWeek(dateTime);
         assertEquals(dateTime.getDayOfWeek(), dayOfWeek);
     }
@@ -21,7 +19,7 @@ class MainTest {
     @Test
     void testGetDayOfMonth() {
         String date = "2023-03-01T13:00:00Z";
-        OffsetDateTime dateTime = OffsetDateTime.parse("2023-03-01T13:00:00Z");
+        OffsetDateTime dateTime = OffsetDateTime.parse(date);
         int dayOfMonth = Main.getDayOfMonth(dateTime);
         assertEquals(1, dayOfMonth);
     }
@@ -29,7 +27,7 @@ class MainTest {
     @Test
     void testGetMonth() {
         String date = "2023-03-01T13:00:00Z";
-        OffsetDateTime dateTime = OffsetDateTime.parse("2023-03-01T13:00:00Z");
+        OffsetDateTime dateTime = OffsetDateTime.parse(date);
         Month month = Main.getMonth(dateTime);
         assertEquals(dateTime.getMonth(), month);
     }
@@ -37,7 +35,7 @@ class MainTest {
     @Test
     void testGetYear() {
         String date = "2023-03-01T13:00:00Z";
-        OffsetDateTime dateTime = OffsetDateTime.parse("2023-03-01T13:00:00Z");
+        OffsetDateTime dateTime = OffsetDateTime.parse(date);
         int year = Main.getYear(dateTime);
         assertEquals(2023, year);
     }
